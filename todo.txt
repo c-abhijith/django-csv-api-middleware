@@ -1,26 +1,46 @@
 
 Respose:
 {
-    sucess files:
-    rejected file:
-    duplicate emails are [emails]
-    name is empty :[row1,row...]
-    age validate_error between0 to 120[]
-    emails are already saved in db[]
+  "success_files": [...],
+  "rejected_files": [...],
+  "duplicate_emails": [...],
+  "name_empty_rows": [...],
+  "age_validation_errors": [...],
+  "invalid_emails": [...],
+  "emails_already_saved": [...]
 }
 
 
-validation
+
+validation in view
 -----------
 name,email,age --> remove non empty fields           ---> Done
 email validation using rejex                         ---> Done
 
-duplicate emails are remove from df    
+duplicate emails are remove from df                  ----> Done
                     -  name must be non empty   
                     -  age must between  0 - 12
                     -  proper email id
                        (if every thing is correct select first record)     
 
-email id already saved in db
+email id already saved in db                       ----> Done                     
 
-age must between 0 to 120                            ----- Done
+age must between 0 to 120                            -----> Done
+
+
+
+
+
+
+
+
+folder structure
+    - error and sucess proper messages
+    - validation functions keep in  utils file
+    - testcase HTML page
+    - response.json file
+
+
+Docker file and compose
+readme file
+postman document

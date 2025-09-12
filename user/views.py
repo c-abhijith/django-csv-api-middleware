@@ -96,8 +96,20 @@ class UserViewSet(viewsets.ViewSet):
             "rows": invalid_email_rows.replace({np.nan: None}).to_dict(orient='records')
         }
         df = df[valid_email_mask].copy()
+        
+        
+        
+        existing_emails = set(User.objects.values_list('email', flat=True))
+        already_existing_df = df[df['email'].isin(existing_emails)]
+        df = df[~df['email'].isin(existing_emails)]
+        response_data["Detailed_validation"]["already_existing_emails_in_db"] = {
+            "rows": already_existing_df.replace({np.nan: None}).to_dict(orient='records')
+        }
+                
+        df = df.drop_duplicates(subset='email', keep='first')
         response_data["success_data"]=len(df)
         response_data["failure_data"]=response_data["total_records"]-len(df)
+        
         
         print(df)
         users_to_create = [
@@ -116,6 +128,5 @@ class UserViewSet(viewsets.ViewSet):
         
 
 
-        # df = df.drop_duplicates(subset='email', keep='first')
 
         return Response(response_data, status=status.HTTP_200_OK)
