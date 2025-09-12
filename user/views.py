@@ -79,6 +79,7 @@ class UserViewSet(viewsets.ViewSet):
         df = df.drop(invalid_age_rows.index)
 
         # df = df.dropna(subset=['age'])
+        
         df = df.drop(nan_rows.index)
         df['age'] = df['age'].astype(int)
         
