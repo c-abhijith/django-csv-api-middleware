@@ -1,0 +1,26 @@
+
+Respose:
+{
+    sucess files:
+    rejected file:
+    duplicate emails are [emails]
+    name is empty :[row1,row...]
+    age validate_error between0 to 120[]
+    emails are already saved in db[]
+}
+
+
+validation
+-----------
+name,email,age --> remove non empty fields           ---> Done
+email validation using rejex                         ---> Done
+
+duplicate emails are remove from df    
+                    -  name must be non empty   
+                    -  age must between  0 - 12
+                    -  proper email id
+                       (if every thing is correct select first record)     
+
+email id already saved in db
+
+age must between 0 to 120                            ----- Done
