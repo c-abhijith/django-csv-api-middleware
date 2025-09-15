@@ -16,7 +16,8 @@ This project covers **2 Tasks**:
 ## Folder Structure
     src                ----> Django project
     user               ----> Django app
-    sample_data        ----> keep files to use the clients
+    sample_data        ----> keep files to use for clientsgit remote add origin https://github.com/c-abhijith/django-csv-api-middleware.git
+
         
 
 
