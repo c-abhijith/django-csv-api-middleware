@@ -17,7 +17,7 @@ class IPAddressLoggingMiddleware:
         count += 1
         cache.set(key, count)
         print(f"IP {ip_address} has made {count} requests.")
-        if count > 4:
+        if count > 100:
                 return JsonResponse({"message": "Too many requests"}, status=status.HTTP_429_TOO_MANY_REQUESTS)
         response = self.get_response(request)
         return response

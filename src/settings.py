@@ -126,13 +126,17 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import math, time
 
-# settings.py
+def cache_key_prefix():
+    window = math.floor(time.time() / (60 * 5))
+    return f"imdb:{window}"
+
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.redis.RedisCache",
         "LOCATION": "redis://localhost:6379/0",
-        "KEY_PREFIX": "imdb",
-        "TIMEOUT": 60 * 5,  
+        "KEY_PREFIX": cache_key_prefix(),
+        "TIMEOUT": 60 * 5,
     }
 }

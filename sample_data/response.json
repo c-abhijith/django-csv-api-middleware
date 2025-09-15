@@ -1,0 +1,107 @@
+{
+    "Detailed_validation": {
+        "rows_with_empty_string": {
+            "rows": [
+                {
+                    "name": null,
+                    "age": -1.0,
+                    "email": "afd@gmail.com"
+                },
+                {
+                    "name": null,
+                    "age": 20.0,
+                    "email": "sam@gmail.com"
+                },
+                {
+                    "name": "sam",
+                    "age": null,
+                    "email": null
+                }
+            ]
+        },
+        "duplicate_emails": {
+            "rows": [
+                {
+                    "name": "abhi",
+                    "age": 13.0,
+                    "email": "abhi@gmail.com"
+                },
+                {
+                    "name": "abhi",
+                    "age": 10.0,
+                    "email": "abhi@gmail.com"
+                }
+            ]
+        },
+        "invalid_age_rows": {
+            "rows": [
+                {
+                    "name": null,
+                    "age": -1.0,
+                    "email": "afd@gmail.com"
+                },
+                {
+                    "name": "ben",
+                    "age": -2.0,
+                    "email": "ben@gmai.com"
+                },
+                {
+                    "name": "Fathima",
+                    "age": -10.0,
+                    "email": "fathima@gmail.com"
+                }
+            ]
+        },
+        "invalid_email_rows": {
+            "rows": [
+                {
+                    "name": "bibin",
+                    "age": 78,
+                    "email": "bibin@g.com"
+                },
+                {
+                    "name": "chandini",
+                    "age": 18,
+                    "email": "chandini.com"
+                },
+                {
+                    "name": "diya",
+                    "age": 90,
+                    "email": "diya.gmail.com"
+                },
+                {
+                    "name": "emmy",
+                    "age": 12,
+                    "email": "emmy@gmail.in"
+                }
+            ]
+        },
+        "already_existing_emails_in_db": {
+            "rows": [
+                {
+                    "name": "abhi",
+                    "age": 13,
+                    "email": "abhi@gmail.com"
+                },
+                {
+                    "name": "Gayathi",
+                    "age": 45,
+                    "email": "gayathri@gmail.com"
+                },
+                {
+                    "name": "abhi",
+                    "age": 10,
+                    "email": "abhi@gmail.com"
+                },
+                {
+                    "name": "zoo",
+                    "age": 23,
+                    "email": "zoo@gmail.com"
+                }
+            ]
+        }
+    },
+    "total_records": 13,
+    "success_data": 0,
+    "failure_data": 13
+}

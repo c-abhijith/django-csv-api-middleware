@@ -14,7 +14,7 @@ Respose:
 
 validation in view
 -----------
-name,email,age --> remove non empty fields           ---> Done
+name,email,age --> remove non empty fields            
 email validation using rejex                         ---> Done
 
 duplicate emails are remove from df                  ----> Done
@@ -35,12 +35,12 @@ age must between 0 to 120                            -----> Done
 
 
 folder structure
-    - error and sucess proper messages
-    - validation functions keep in  utils file
-    - testcase HTML page
-    - response.json file
+    - error and sucess proper messages       ---->Done
+    - response.json file                       ---Done
 
 
-Docker file and compose
-readme file
-postman document
+testcase                            ----->Done
+
+readme file                            --->Done
+postman document                        --->Done
+ 
