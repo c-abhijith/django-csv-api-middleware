@@ -166,3 +166,6 @@ python manage.py test
 ##  Sample_data(Folder)
     It just keep csv file ,json response file  and test case result image
 
+
+    
+
